@@ -31,4 +31,4 @@ for resultado in result:
         print()
 #result = result.findAll('title')
 #print(result)
-print("teste")
+print("teste2")
