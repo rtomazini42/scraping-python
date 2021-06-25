@@ -31,3 +31,5 @@ import pandas as pd
 dataset = pd.DataFrame(card)
 dataset = pd.DataFrame.from_dict(card, orient = 'index')
 print(dataset)
+
+print(dataset[0])
