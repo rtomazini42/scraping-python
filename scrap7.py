@@ -1,7 +1,7 @@
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
-
+from urllib.request import urlretrieve
 
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'}
@@ -29,7 +29,10 @@ card['items'] = acessorios
 import pandas as pd
 
 dataset = pd.DataFrame(card)
-dataset = pd.DataFrame.from_dict(card, orient = 'index')
+dataset = pd.DataFrame.from_dict(card, orient = 'index').T
 print(dataset)
+dataset.to_csv('./dados/dataset.csv', sep=';', index = False, encoding = 'utf-8-sig') #salvando em csv
 
-print(dataset[0])
+image = anuncio.find('div', {'class': 'image-card'}).img
+image.get('src').split('/')[-1]
+urlretrieve(image.get('src'), './dados/img/' + image.get('src').split('/')[-1])
