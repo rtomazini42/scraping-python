@@ -32,3 +32,8 @@ for resultado in result:
 #result = result.findAll('title')
 #print(result)
 print("teste2")
+print("teste1")
+print("teste2")
+print("teste1")
+print("teste2")
+print("teste1")
