@@ -25,9 +25,3 @@ acessorios = []
 for item in items:
     acessorios.append(item.getText().replace('► ', ''))
 card['items'] = acessorios
-
-import pandas as pd
-
-dataset = pd.DataFrame(card)
-dataset = pd.DataFrame.from_dict(card, orient = 'index')
-print(dataset)
